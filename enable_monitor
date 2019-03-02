@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# This re-enables the display on the active tty after a 5 second delay. 
+# Useful on a laptop if you manage to get the built in display disabled with no external monitor connected.
+# Usage: ctrl+shift+3 (or whatever number), then login and execute this script, then quickly ctrl+shift+2 (or whatever number your main is)
+# Used on Fedora 29 on Dell Lattitude E7470
+monitor=$(xrandr -d :0 -q | awk 'NR==2 {print $1}')  # https://stackoverflow.com/a/41451062/6605826 https://askubuntu.com/a/406133/575837
+echo Primary momnitor is $monitor
+echo Quick! Switch to primary display within 5 seconds!
+sleep 5 && xrandr -d :0 --output $monitor --auto  # https://askubuntu.com/a/839371/575837
+echo "Finished executing: sleep 5 && xrandr -d :0 --output $monitor --auto "

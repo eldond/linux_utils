@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Swaps mouse buttons on only one mouse. 
+# Has to be run all the time because ID changes when undocking and re-docking.
+# I use two mice and I want the primary button to be under my index finger on each hand.
+
+# Use xinput list and find the device you want swapped. Record its name below:
+MOUSE_NAME="DELL Laser Mouse"
+
+MOUSE_ID=`xinput list | grep "$MOUSE_NAME" | grep -Po 'id=\K[^ ]+' | awk '{print $1}'`
+echo "Swapping mouse buttons on device $MOUSE_NAME with id=$MOUSE_ID"
+xinput set-button-map $MOUSE_ID 3 2 1
+
