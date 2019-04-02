@@ -1,0 +1,2 @@
+The files here (except for this note) should go in /etc
+

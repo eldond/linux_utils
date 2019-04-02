@@ -1,0 +1,1 @@
+share_data -fstype=cifs,rw,noperm,credentials=/etc/credentials.txt ://plutus.gat.com/FileServer/Users/EldonD 

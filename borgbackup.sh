@@ -1,4 +1,4 @@
-EDIT THIS SCRIPT to put in the real passphrase
+EDIT THIS SCRIPT to put in the real passphrase (surrounded by single quotes)
 copy it to /bin
 chmod 0700 on it so no one can read your passphrase
 #!/bin/sh
