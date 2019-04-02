@@ -72,6 +72,8 @@ borg create                         \
     --exclude '/home/eldond/.config/google-chrome/CertificateTransparency/*' \
     --exclude '/home/eldond/.config/google-chrome/Default/IndexedDB/*' \
     --exclude '/home/eldond/.PyCharmCE2018.1/*' \
+    --exclude '/home/eldond/.config/google-chrome/Default/Cookies*' \
+    --exclude '/home/eldond/.local/share/RecentDocuments/*' \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \
