@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script copies the "in-use" copy of borgbackup.sh from /bin and changes permissions so changes can be checked in. Also redacts the password.
+# This script copies the "in-use" copies of autofs config files from /etc and changes permissions so changes can be checked in. Also redacts the password.
 # Run as root / sudo
 echo "The files here (except for this note) should go in /etc" > etc/note.txt
 echo "" >> etc/note.txt
