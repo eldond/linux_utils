@@ -16,6 +16,13 @@ trap 'echo $( date ) Backup interrupted >&2; exit 2' INT TERM
 
 info "Starting backup"
 
+if [ -z "$(service autofs status | grep Active:\ active)" ]
+then
+    service autofs start
+else
+    echo autofs already running
+fi
+
 # Backup the most important directories into an archive named after
 # the machine this script is currently running on:
 
@@ -74,6 +81,10 @@ borg create                         \
     --exclude '/home/eldond/.PyCharmCE2018.1/*' \
     --exclude '/home/eldond/.config/google-chrome/Default/Cookies*' \
     --exclude '/home/eldond/.local/share/RecentDocuments/*' \
+    --exclude '/var/lib/upower/history-*.dat' \
+    --exclude '/var/log/*' \
+    --exclude '/home/eldond/PycharmProjects/omfit/.idea/*' \
+    --exclude '/home/eldond/.config/google-chrome' \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \
