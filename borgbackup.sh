@@ -3,6 +3,9 @@ copy it to /bin
 chmod 0700 on it so no one can read your passphrase
 #!/bin/sh
 
+# If this script fails and leaves the repo locked, unlock with:
+# sudo borg break-lock /mnt/cifs_share/share_data/backups/
+
 # Setting this, so the repo does not need to be given on the commandline:
 export BORG_REPO=/mnt/cifs_share/share_data/backups/
 # Setting this, so you won't be asked for your repository passphrase:
@@ -86,7 +89,7 @@ borg create                         \
     --exclude '/home/eldond/pcs/d3d/*' \
     --exclude '/home/eldond/Documents/experiments_and_research/planning/prad_asipp_expt/*' \
     --exclude '/home/eldond/Documents/experiments_and_research/planning/livia_solps_support/solps_custom_plots/*' \
-    --exclude '/home/eldond/Documents/experiments_and_research/planning/detach_and_rad_ctrl/lp_detach_mp_5d67f273640e32177258959c/figures/*' \
+    --exclude '/home/eldond/Documents/experiments_and_research/planning/detach_and_rad_ctrl/lp_detach_mp_5d67f273640e32177258959c/*' \
     --exclude '/home/eldond/PycharmProjects/omfit/.idea/*' \
     --exclude '/home/eldond/.config/google-chrome' \
                                     \
