@@ -88,8 +88,9 @@ borg create                         \
     --exclude '/var/log/*' \
     --exclude '/home/eldond/pcs/d3d/*' \
     --exclude '/home/eldond/Documents/experiments_and_research/planning/prad_asipp_expt/*' \
+    --exclude '/home/eldond/Documents/experiments_and_research/planning/detach_and_rad_ctrl/LP_detach/805post_lp_detach_5d787ecdb2ceeb0001aa5d31/*' \
     --exclude '/home/eldond/Documents/experiments_and_research/planning/livia_solps_support/solps_custom_plots/*' \
-    --exclude '/home/eldond/Documents/experiments_and_research/planning/detach_and_rad_ctrl/lp_detach_mp_5d67f273640e32177258959c/*' \
+    --exclude '/home/eldond/Documents/experiments_and_research/planning/detach_and_rad_ctrl/LP_detach/lp_detach_mp_5d67f273640e32177258959c/*' \
     --exclude '/home/eldond/PycharmProjects/omfit/.idea/*' \
     --exclude '/home/eldond/.config/google-chrome' \
                                     \
