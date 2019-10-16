@@ -95,6 +95,11 @@ borg create                         \
     --exclude '/home/eldond/Documents/personal/opc/*' \
     --exclude '/home/eldond/.config/skypeforlinux/*' \
     --exclude '/home/eldond/Documents/experiments_and_research/planning/detach_and_rad_ctrl/notes_5ccc53276221f76dfd31f924/*' \
+    --exclude '/home/eldond/pcs/d3d/*' \
+    --exclude '/home/eldond/Documents/experiments_and_research/planning/prad_asipp_expt/*' \
+    --exclude '/home/eldond/Documents/experiments_and_research/planning/detach_and_rad_ctrl/LP_detach/805post_lp_detach_5d787ecdb2ceeb0001aa5d31/*' \
+    --exclude '/home/eldond/Documents/experiments_and_research/planning/livia_solps_support/solps_custom_plots/*' \
+    --exclude '/home/eldond/Documents/experiments_and_research/planning/detach_and_rad_ctrl/LP_detach/lp_detach_mp_5d67f273640e32177258959c/*' \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \
