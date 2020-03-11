@@ -4,10 +4,10 @@ chmod 0700 on it so no one can read your passphrase
 #!/bin/sh
 
 # If this script fails and leaves the repo locked, unlock with:
-# sudo borg break-lock /mnt/cifs_share/share_data/backups2/
+# sudo borg break-lock /mnt/cifs_share/share_data/backups/
 
 # Setting this, so the repo does not need to be given on the commandline:
-export BORG_REPO=/mnt/cifs_share/share_data/backups2/
+export BORG_REPO=/mnt/cifs_share/share_data/backups/
 # Setting this, so you won't be asked for your repository passphrase:
 export BORG_PASSPHRASE=REDACTED
 # or this to ask an external program to supply the passphrase:
@@ -26,8 +26,8 @@ else
     echo autofs already running
 fi
 
-info "Listing of /mnt/cifs_share/share_data/backups2/ :"
-ls /mnt/cifs_share/share_data/backups2/
+info "Listing of $BORG_REPO :"
+ls $BORG_REPO
 
 # Backup the most important directories into an archive named after
 # the machine this script is currently running on:
@@ -100,6 +100,7 @@ borg create                         \
     --exclude '/home/eldond/Documents/experiments_and_research/planning/detach_and_rad_ctrl/LP_detach/805post_lp_detach_5d787ecdb2ceeb0001aa5d31/*' \
     --exclude '/home/eldond/Documents/experiments_and_research/planning/livia_solps_support/solps_custom_plots/*' \
     --exclude '/home/eldond/Documents/experiments_and_research/planning/detach_and_rad_ctrl/LP_detach/lp_detach_mp_5d67f273640e32177258959c/*' \
+    --exclude '/home/eldond/miniconda3/*' \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \

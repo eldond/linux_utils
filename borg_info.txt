@@ -1,0 +1,27 @@
+BORG BACKUP INFORMATION
+work laptop with work backup
+
+REPO:
+/mnt/cifs_share/share_data/backups2/
+
+To show repo id:
+borg config REPO id
+borg config /mnt/cifs_share/share_data/backups2/ id
+
+The server side is:
+/mnt/cifs_share/share_data/backups2
+
+The local cache is:
+~/.cache/borg/ID
+
+PROBLEM SOLVING:
+Leftover lock from failed / interrupted backup:
+sudo borg break-lock /mnt/cifs_share/share_data/backups2/
+
+Corrupted cache from failed / interrupted backup:
+sudo borg delete --cache-only /mnt/cifs_share/share_data/backups2/
+
+
+
+More information:
+https://github.com/borgbackup/borg/issues/3858

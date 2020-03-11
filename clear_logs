@@ -1,0 +1,4 @@
+# Cleans up some log files
+journalctl --vacuum-time=10d  # Clear systemd logs older than 10d
+
+
