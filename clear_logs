@@ -1,4 +1,5 @@
 # Cleans up some log files
+# https://ma.ttias.be/clear-systemd-journal/
 journalctl --vacuum-time=10d  # Clear systemd logs older than 10d
 
 

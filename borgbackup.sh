@@ -4,10 +4,10 @@ chmod 0700 on it so no one can read your passphrase
 #!/bin/sh
 
 # If this script fails and leaves the repo locked, unlock with:
-# sudo borg break-lock /mnt/cifs_share/share_data/backups/
+# sudo borg break-lock /mnt/cifs_share/share_data/backups3/
 
 # Setting this, so the repo does not need to be given on the commandline:
-export BORG_REPO=/mnt/cifs_share/share_data/backups/
+export BORG_REPO=/mnt/cifs_share/share_data/backups3/
 # Setting this, so you won't be asked for your repository passphrase:
 export BORG_PASSPHRASE=REDACTED
 # or this to ask an external program to supply the passphrase:
@@ -101,6 +101,15 @@ borg create                         \
     --exclude '/home/eldond/Documents/experiments_and_research/planning/livia_solps_support/solps_custom_plots/*' \
     --exclude '/home/eldond/Documents/experiments_and_research/planning/detach_and_rad_ctrl/LP_detach/lp_detach_mp_5d67f273640e32177258959c/*' \
     --exclude '/home/eldond/miniconda3/*' \
+    --exclude '/home/eldond/Documents/itpa_2020/presentation*/*' \
+    --exclude '/home/eldond/Documents/experiments_and_research/planning/itpa_2020/presentation*/*' \
+    --exclude '/home/eldond/Documents/experiments_and_research/planning/itpa_2020/itpa_divsol_2020/*' \
+    --exclude '/home/eldond/Documents/iaea_2020/iaea_fec_2020/*' \
+    --exclude '/home/eldond/Documents/MAST-U/notes_5cdb9998f1eef81b9b550d02/*' \
+    --exclude '/home/eldond/Documents/psi_2020/paper_5e6baf6eaaf9cb00010a3c71/*' \
+    --exclude '/home/eldond/Documents/experiments_and_research/planning/itpa_divsol_2020/itpa_divsol_2020/*' \
+    --exclude '/home/eldond/.zoom/*' \
+    --exclude '/home/eldond/.mozilla/*' \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \
