@@ -110,6 +110,7 @@ borg create                         \
     --exclude '/home/eldond/Documents/experiments_and_research/planning/itpa_divsol_2020/itpa_divsol_2020/*' \
     --exclude '/home/eldond/.zoom/*' \
     --exclude '/home/eldond/.mozilla/*' \
+    --exclude '/var/lib/selinux/targeted/active/modules/*' \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \
