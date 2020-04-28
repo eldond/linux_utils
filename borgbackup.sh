@@ -111,6 +111,10 @@ borg create                         \
     --exclude '/home/eldond/.zoom/*' \
     --exclude '/home/eldond/.mozilla/*' \
     --exclude '/var/lib/selinux/targeted/active/modules/*' \
+    --exclude '/home/eldond/.local/share/baloo/index' \
+    --exclude '/root/.cache/*' \
+    --exclude '/home/eldond/.local/share/Trash/*' \
+    --exclude '/var/lib/systemd/coredump/*' \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \
