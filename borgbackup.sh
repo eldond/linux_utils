@@ -40,6 +40,7 @@ borg create                         \
     --show-rc                       \
     --compression lz4               \
     --exclude-caches                \
+    --exclude-if-present '.git' \
     --exclude '/home/*/.cache/*'    \
     --exclude '/var/cache/*'        \
     --exclude '/var/tmp/*'          \
@@ -115,6 +116,9 @@ borg create                         \
     --exclude '/root/.cache/*' \
     --exclude '/home/eldond/.local/share/Trash/*' \
     --exclude '/var/lib/systemd/coredump/*' \
+    --exclude '/home/eldond/util/' \
+    --exclude '/var/spool/abrt/' \
+    --exclude '/home/eldond/.config/discord/' \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \
