@@ -119,6 +119,10 @@ borg create                         \
     --exclude '/home/eldond/util/' \
     --exclude '/var/spool/abrt/' \
     --exclude '/home/eldond/.config/discord/' \
+    --exclude '/var/lib/selinux/targeted/tmp/' \
+    --exclude '/home/eldond/.local/lib/python3.8/site-packages/*' \
+    --exclude '/var/lib/gdm/.cache/mesa_shader_cache/*' \
+    --exclude '/var/lib/rpm/*' \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \
