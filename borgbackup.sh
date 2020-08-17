@@ -123,6 +123,7 @@ borg create                         \
     --exclude '/home/eldond/.local/lib/python3.8/site-packages/*' \
     --exclude '/var/lib/gdm/.cache/mesa_shader_cache/*' \
     --exclude '/var/lib/rpm/*' \
+    --exclude '/home/eldond/tmp/*' \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \
