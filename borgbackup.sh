@@ -124,6 +124,7 @@ borg create                         \
     --exclude '/var/lib/gdm/.cache/mesa_shader_cache/*' \
     --exclude '/var/lib/rpm/*' \
     --exclude '/home/eldond/tmp/*' \
+    --exclude '/home/eldond/.config/google-chrome-unstable/Default/Service Worker/*' \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \
