@@ -125,6 +125,7 @@ borg create                         \
     --exclude '/var/lib/rpm/*' \
     --exclude '/home/eldond/tmp/*' \
     --exclude '/home/eldond/.config/google-chrome-unstable/Default/Service Worker/*' \
+    --exclude '/home/eldond/.local/share/akonadi/*' \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \
