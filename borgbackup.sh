@@ -42,6 +42,7 @@ borg create                         \
     --exclude-caches                \
     --exclude-if-present '.git' \
     --exclude '/home/*/.cache/*'    \
+    --exclude '/home/eldond/.config/Slack/*' \
     --exclude '/var/cache/*'        \
     --exclude '/var/tmp/*'          \
     --exclude '/home/eldond/Downloads/*' \
@@ -126,6 +127,7 @@ borg create                         \
     --exclude '/home/eldond/tmp/*' \
     --exclude '/home/eldond/.config/google-chrome-unstable/Default/Service Worker/*' \
     --exclude '/home/eldond/.local/share/akonadi/*' \
+    --exclude '/home/eldond/.config/google-chrome-unstable/' \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \
