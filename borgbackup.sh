@@ -128,6 +128,8 @@ borg create                         \
     --exclude '/home/eldond/.config/google-chrome-unstable/Default/Service Worker/*' \
     --exclude '/home/eldond/.local/share/akonadi/*' \
     --exclude '/home/eldond/.config/google-chrome-unstable/' \
+    --exclude '/var/lib/texmf/web2c/' \
+    --exclude '/root/.texlive2020/texmf-var/luatex-cache/' \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \
