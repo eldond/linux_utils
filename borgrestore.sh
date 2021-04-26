@@ -3,6 +3,16 @@ copy it to /bin
 chmod 0700 on it so no one can read your passphrase
 #!/bin/sh
 
+# Please call this script with an argument to restore a specific file (or folder and contents)
+# It is recommended to run the restore somewhere temporary or isolated to avoid making a mess
+# How about this?
+# cd /tmp
+# mkdir restore
+# cd restore
+# sudo borgrestore.sh home/eldond/Documents/cv
+
+# Note: no leading / in paths in the backup.
+
 # If this script fails and leaves the repo locked, unlock with:
 # sudo borg break-lock /mnt/cifs_share/share_data/backups3/
 
@@ -19,8 +29,11 @@ info() { printf "\n%s %s\n\n" "$( date )" "$*" >&2; }
 trap 'echo $( date ) Backup restore interrupted >&2; exit 2' INT TERM
 
 info "Starting restore from backup..."
-info "Trying to extract file: $1"
-
+echo "Trying to extract file: " $1
+echo "You should target this at a specific file or folder using command-line arguments."
+echo "With no argument, this script will try to restore the entire backup, "
+echo "which probably isn't what's needed for spot checks!"
+echo ""
 
 if [ -z "$(service autofs status | grep Active:\ active)" ]
 then
@@ -39,6 +52,6 @@ echo "${ARCHIVE}"
 # echo 'Contents = '
 # borg list $BORG_REPO::$ARCHIVE
 
-echo 'Extracting $1 ...'
+echo Extracting $1 ...
 borg extract --verbose --list $BORG_REPO::$ARCHIVE $1
 
