@@ -6,3 +6,8 @@ chmod 777 borgbackup.sh
 sed -i 's/BORG_PASSPHRASE=.*/BORG_PASSPHRASE=REDACTED/g' ./borgbackup.sh  # https://stackoverflow.com/a/9189153/6605826
 sed -i '1s|^|EDIT THIS SCRIPT to put in the real passphrase (surrounded by single quotes)\ncopy it to /bin\nchmod 0700 on it so no one can read your passphrase\n|' ./borgbackup.sh  # https://stackoverflow.com/a/21574381/6605826
 
+cp /bin/borgrestore.sh .
+chmod 777 borgrestore.sh
+sed -i 's/BORG_PASSPHRASE=.*/BORG_PASSPHRASE=REDACTED/g' ./borgrestore.sh  # https://stackoverflow.com/a/9189153/6605826
+sed -i '1s|^|EDIT THIS SCRIPT to put in the real passphrase (surrounded by single quotes)\ncopy it to /bin\nchmod 0700 on it so no one can read your passphrase\n|' ./borgrestore.sh  # https://stackoverflow.com/a/21574381/6605826
+
