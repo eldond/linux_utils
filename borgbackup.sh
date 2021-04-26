@@ -43,8 +43,6 @@ borg create                         \
     --exclude-if-present '.git' \
     --exclude '/home/*/.cache/*'    \
     --exclude '/home/eldond/.config/Slack/*' \
-    --exclude '/var/cache/*'        \
-    --exclude '/var/tmp/*'          \
     --exclude '/home/eldond/Downloads/*' \
     --exclude '/home/eldond/OMFIT-*/*' \
     --exclude '/home/eldond/PCSPS/*' \
@@ -89,8 +87,6 @@ borg create                         \
     --exclude '/home/eldond/.PyCharmCE2018.1/*' \
     --exclude '/home/eldond/.config/google-chrome/Default/Cookies*' \
     --exclude '/home/eldond/.local/share/RecentDocuments/*' \
-    --exclude '/var/lib/upower/history-*.dat' \
-    --exclude '/var/log/*' \
     --exclude '/home/eldond/PycharmProjects/omfit/.idea/*' \
     --exclude '/home/eldond/.config/google-chrome' \
     --exclude '/home/eldond/.local/share/baloo/index-lock' \
@@ -112,24 +108,31 @@ borg create                         \
     --exclude '/home/eldond/Documents/experiments_and_research/planning/itpa_divsol_2020/itpa_divsol_2020/*' \
     --exclude '/home/eldond/.zoom/*' \
     --exclude '/home/eldond/.mozilla/*' \
-    --exclude '/var/lib/selinux/targeted/active/modules/*' \
     --exclude '/home/eldond/.local/share/baloo/index' \
     --exclude '/root/.cache/*' \
     --exclude '/home/eldond/.local/share/Trash/*' \
-    --exclude '/var/lib/systemd/coredump/*' \
     --exclude '/home/eldond/util/' \
-    --exclude '/var/spool/abrt/' \
     --exclude '/home/eldond/.config/discord/' \
-    --exclude '/var/lib/selinux/targeted/tmp/' \
     --exclude '/home/eldond/.local/lib/python3.8/site-packages/*' \
-    --exclude '/var/lib/gdm/.cache/mesa_shader_cache/*' \
-    --exclude '/var/lib/rpm/*' \
     --exclude '/home/eldond/tmp/*' \
     --exclude '/home/eldond/.config/google-chrome-unstable/Default/Service Worker/*' \
     --exclude '/home/eldond/.local/share/akonadi/*' \
     --exclude '/home/eldond/.config/google-chrome-unstable/' \
-    --exclude '/var/lib/texmf/web2c/' \
     --exclude '/root/.texlive2020/texmf-var/luatex-cache/' \
+    --exclude '/var/cache/*'        \
+    --exclude '/var/tmp/*'          \
+    --exclude '/var/lock/*'         \
+    --exclude '/var/run/*'          \
+    --exclude '/var/log/*'          \
+    --exclude '/var/spool/*'        \
+    --exclude '/var/lib/upower/history-*.dat' \
+    --exclude '/var/lib/texmf/web2c/' \
+    --exclude '/var/lib/gdm/.cache/mesa_shader_cache/*' \
+    --exclude '/var/lib/rpm/*'      \
+    --exclude '/var/lib/selinux/targeted/tmp/' \
+    --exclude '/var/lib/systemd/coredump/*' \
+    --exclude '/var/lib/selinux/targeted/active/modules/*' \
+    --exclude '.~lock.*'            \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \
