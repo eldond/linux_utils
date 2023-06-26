@@ -125,6 +125,7 @@ borg create                         \
     --exclude '/var/run/*'          \
     --exclude '/var/log/*'          \
     --exclude '/var/spool/*'        \
+    --exclude '/home/eldond/.config/Code/*'	\
     --exclude '/var/lib/upower/history-*.dat' \
     --exclude '/var/lib/texmf/web2c/' \
     --exclude '/var/lib/gdm/.cache/mesa_shader_cache/*' \

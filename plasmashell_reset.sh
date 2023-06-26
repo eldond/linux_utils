@@ -1,2 +1,2 @@
-killall plasmashell; kstart plasmashell --shut-up; exit
+killall plasmashell; kstart plasmashell; exit
 
