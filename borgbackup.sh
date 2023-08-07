@@ -133,6 +133,7 @@ borg create                         \
     --exclude '/var/lib/selinux/targeted/tmp/' \
     --exclude '/var/lib/systemd/coredump/*' \
     --exclude '/var/lib/selinux/targeted/active/modules/*' \
+    --exclude '/home/eldond/.vscode/extensions/*' \
     --exclude '.~lock.*'            \
                                     \
     ::'{hostname}-{now}'            \
