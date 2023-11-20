@@ -134,6 +134,7 @@ borg create                         \
     --exclude '/var/lib/systemd/coredump/*' \
     --exclude '/var/lib/selinux/targeted/active/modules/*' \
     --exclude '/home/eldond/.vscode/extensions/*' \
+    --exclude '/home/eldond/.julia/*' \
     --exclude '.~lock.*'            \
                                     \
     ::'{hostname}-{now}'            \
